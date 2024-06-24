@@ -7,8 +7,13 @@
   <script>
     const params = new URLSearchParams(window.location.search);
     const authorizationCode = params.get('code');
-    document.write('Authorization code received: ' + authorizationCode);
-    console.log('Authorization code:', authorizationCode);
+    if (authorizationCode) {
+      document.write('Authorization code received: ' + authorizationCode);
+      console.log('Authorization code:', authorizationCode);
+    } else {
+      document.write('No authorization code found.');
+      console.log('No authorization code found. URL parameters:', window.location.search);
+    }
   </script>
 </body>
 </html>
