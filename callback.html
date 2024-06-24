@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Authorization Code</title>
+</head>
+<body>
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const authorizationCode = params.get('code');
+    document.write('Authorization code received: ' + authorizationCode);
+    console.log('Authorization code:', authorizationCode);
+  </script>
+</body>
+</html>
